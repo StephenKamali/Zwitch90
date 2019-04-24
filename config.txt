@@ -1,0 +1,26 @@
+#Config using the dpi_output_format info we settled on in meeting
+
+#Overscan Information
+overscan_left=0
+overscan_right=0
+overscan_top=0
+overscan_bottom=0
+disable_overscan=0
+
+framebuffer_width=640
+framebuffer_height=480
+
+#Disable spi and i2c, we need these pins.
+dtparam=spi=off
+dtparam=i2c_arm=off
+
+#Enable the lcd, enable custom display sizes with CVT, set as the default output.
+
+dtoverlay=dpi18
+enable_dpi_lcd=1
+display_default_lcd=1
+
+dpi_group=2
+dpi_mode=87
+dpi_output_format=21
+hdmi_timings=640 1 16 48 96 480 0 32 2 11 0 0 0 60 0 32000000 1
